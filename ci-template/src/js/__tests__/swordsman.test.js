@@ -1,12 +1,12 @@
-import {Character} from '../character.js';
-import {Swordsman} from '../swordsman.js';
+import Swordsman from '../swordsman.js';
 
-let swordsman = new Swordsman('name');
-
-test('swordsman attack', () => {
-    expect(swordsman.attack).toBe(40);
+test('swordsman class test', () => {
+    const swordsman = new Swordsman('Swordsman');
+    const correct = {
+        attack: 40,
+        defence: 10,
+        health: 100,
+        level: 1
+    };
+    expect(swordsman).toEqual(correct);
 });
-
-test('swordsman defence', () => {
-    expect(swordsman.defence).toBe(10);
-})

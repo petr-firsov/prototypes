@@ -1,12 +1,12 @@
-import {Character} from '../character.js';
-import {Daemon} from '../daemon.js';
+import Daemon from '../daemon.js';
 
-let daemon = new Daemon('name');
-
-test('daemon attack', () => {
-    expect(daemon.attack).toBe(10);
+test('daemon class test', () => {
+    const daemon = new Daemon('Daemon');
+    const correct = {
+        attack: 10,
+        defence: 40,
+        health: 100,
+        level: 1
+    };
+    expect(daemon).toEqual(correct);
 });
-
-test('daemon defence', () => {
-    expect(daemon.defence).toBe(40);
-})

@@ -1,12 +1,12 @@
-import {Character} from '../character.js';
-import {Zombie} from '../zombie.js';
+import Zombie from '../zombie.js';
 
-let zombie = new Zombie('name');
-
-test('zombie attack', () => {
-    expect(zombie.attack).toBe(40);
+test('zombie class test', () => {
+    const zombie = new Zombie('Zombie');
+    const correct = {
+        attack: 40,
+        defence: 10,
+        health: 100,
+        level: 1
+    };
+    expect(zombie).toEqual(correct);
 });
-
-test('zombie defence', () => {
-    expect(zombie.defence).toBe(10);
-})

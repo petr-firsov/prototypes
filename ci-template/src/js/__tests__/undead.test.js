@@ -1,12 +1,12 @@
-import {Character} from '../character.js';
-import {Undead} from '../undead.js';
+import Undead from '../undead.js';
 
-let undead = new Undead('name');
-
-test('undead attack', () => {
-    expect(undead.attack).toBe(25);
+test('undead class test', () => {
+    const undead = new Undead('Undead');
+    const correct = {
+        attack: 25,
+        defence: 25,
+        health: 100,
+        level: 1
+    };
+    expect(undead).toEqual(correct);
 });
-
-test('undead defence', () => {
-    expect(undead.defence).toBe(25);
-})

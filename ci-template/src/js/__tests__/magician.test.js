@@ -1,12 +1,12 @@
-// import {Character} from '../character.js';
-import {Magician} from '../magician.js';
+import Magician from '../magician.js';
 
-let magician = new Magician('name');
-
-test('magician attack', () => {
-    expect(magician.attack).toBe(10);
+test('magician class test', () => {
+    const magician = new Magician('Magician');
+    const correct = {
+        attack: 10,
+        defence: 40,
+        health: 100,
+        level: 1,
+    };
+    expect(magician).toEqual(correct);
 });
-
-test('magician defence', () => {
-    expect(magician.defence).toBe(40);
-})

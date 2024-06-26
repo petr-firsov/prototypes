@@ -1,11 +1,12 @@
-import {Bowman} from '../bowman.js';
+import Bowman from '../bowman.js';
 
-let bowman = new Bowman('name');
-
-test('bowman attack', () => {
-    expect(bowman.attack).toBe(25);
+test('bowman class test', () => {
+    const bowman = new Bowman('Bowman');
+    const correct = {
+        attack: 25,
+        defence: 25,
+        health: 100,
+        level: 1
+    };
+    expect(bowman).toEqual(correct);
 });
-
-test('bowman defence', () => {
-    expect(bowman.defence).toBe(25);
-})
