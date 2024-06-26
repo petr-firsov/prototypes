@@ -5,6 +5,8 @@ import Bowman from '../bowman.js';
 test('health and level test', () => {
 	const healthLevel = new Character('12345', 'Magician');
 	const correct = {
+        name: '12345',
+        type: 'Magician',
 		attack: undefined,
         defence: undefined,
         health: 100,
@@ -46,6 +48,8 @@ test('levelUp test', () => {
     bowman.damage(67);
     bowman.levelUp();
     const correct = {
+        name: 'name',
+        type: 'Bowman',
         health: 100,
         level: 2,
         attack: 30,
